@@ -11,86 +11,86 @@ function conjuction() {
     if (x == "t" || x == "T" || x== "true" || x=="True" || x == "1") {
         x = true
     }
-    else if (x == "f" || x == "F" || x == "0" || x == "False") {
+    else if (x == "f" || x == "F" || x == "0" || x == "False" || x=="false") {
         x = false
     }
     if (y == "t" || y == "T" || y== "true" || y=="True" || y == "1") {
         y = true
     }
-    else if (y == "f" || y == "F" || y == "0") {
+    else if (y == "f" || y == "F" || y == "0" || y== "false" || y=="False") {
         y = false
     }
 
     
     if (x * y == true){
-        conjuction_result = "true"
+        conjuction_result = " true"
     }
     else if (x * y == false){
-        conjuction_result = "false"
+        conjuction_result = " false"
     }
     
     result.innerHTML = conjuction_result
 }
 
 //logical +
-function disjunction (x, y) {
-    if (x == "t" || x == "T" || x== "true" || x=="True") {
+function disjunction() {
+    let x = document.getElementById("DisX").value
+    let y = document.getElementById("DisY").value
+    let result = document.getElementById("DisR")
+
+    if (x == "t" || x == "T" || x== "true" || x=="True" || x == "1") {
         x = true
     }
-    else if (x == "f" || x == "F") {
+    else if (x == "f" || x == "F" || x == "0" || x == "False" || x=="false") {
         x = false
     }
-    if (y == "t" || y == "T" || y== "true" || y=="True") {
+    if (y == "t" || y == "T" || y== "true" || y=="True" || y == "1") {
         y = true
     }
-    else if (y == "f" || y == "F") {
+    else if (y == "f" || y == "F" || y == "0" || y== "false" || y=="False") {
         y = false
     }
-    if (isNaN(x) || isNaN(y)) {
-        disjunction_result = "error"
+    let a = x + y
+
+    if (a == true || a == 2){
+        disjunction_result = " true"
     }
-    else {
-        disjunction_result = y + x
+    else if (a == false){
+        disjunction_result = " false"
     }
+    
+    result.innerHTML = disjunction_result
 }
 
-//logical not
-function negation (x) {
-    if (x == "t" || x == "T" || x== "true" || x=="True") {
-        x = true
-    }
-    else if (x == "f" || x == "F") {
-        x = false
-    }
-    if (isNaN(x) ) {
-        negation_result = "error"
-    }
-    else {
-        negation_result = !x
-    }
 
-}
 
 // XOR
-function exclusive (x, y){
-    if (x == "t" || x == "T" || x== "true" || x=="True") {
+function exclusive (){
+    let x = document.getElementById("ExX").value
+    let y = document.getElementById("ExY").value
+    let result = document.getElementById("ExR")
+    if (x == "t" || x == "T" || x== "true" || x=="True" || x == "1") {
         x = true
     }
-    else if (x == "f" || x == "F") {
+    else if (x == "f" || x == "F" || x == "0" || x == "False" || x=="false") {
         x = false
     }
-    if (y == "t" || y == "T" || y== "true" || y=="True") {
+    if (y == "t" || y == "T" || y== "true" || y=="True" || y == "1") {
         y = true
     }
-    else if (y == "f" || y == "F") {
+    else if (y == "f" || y == "F" || y == "0" || y== "false" || y=="False") {
         y = false
     }
-    if (isNaN(x) || isNaN(y)) {
-        exclusive_result = "error"
-    }
-    else {
-        exclusive_result = (!x * y) + (x * !y)
-    }
+
+   
+        if ((!x * y) + (x * !y) == true){
+            exclusive_result = " true"
+        }
+        else if ((!x * y) + (x * !y) == false){
+            exclusive_result = " false"
+        }
+    
+    result.innerHTML = exclusive_result
 }
 
 
