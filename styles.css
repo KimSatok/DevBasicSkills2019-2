@@ -69,6 +69,7 @@ body{
 /*end of grid stylings*/
 .sidemenuoption{
     background-color: lightgray;
+    border:grey 3px solid;
     width: 120px;
     text-align: center;
     border-radius: 25%;
@@ -111,6 +112,20 @@ body{
 .contentheading{
     font-weight: bold;
 }
+
+.contentsinglebox{
+    border:5px grey groove;
+    width: auto;
+    height: 200px;
+    margin: 10px;
+    background-color: lightgray;
+}
+.pcanswerbox{
+    border:1px black solid;
+    background-color: seashell;
+    margin:5px;
+    padding:5px;
+}
 .numberinput{
     height:20px;
 }
@@ -118,6 +133,7 @@ body{
     border:1px black solid;
     height: 20px;
     width: auto;
+    background-color: seashell;
 }
 
 .holdingbox{
@@ -141,4 +157,5 @@ body{
 .innerpageheading{
     font-weight: bold;
     font-size: 30px;
+    margin: 10px;
 }
