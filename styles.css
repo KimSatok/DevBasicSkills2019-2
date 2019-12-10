@@ -1,11 +1,7 @@
 body{
     max-width: 920px;
     margin: auto;
-    background-image: url(images/background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     min-height: 100vh;
-    border:5px gold groove
 }
 
 
@@ -43,9 +39,10 @@ body{
         line-height: 75px;
     }
     
+    
 }/*end of small media size*/
 
-@media (min-width: 820px) {
+@media (min-width: 520px) {
     .maingrid {
       display: grid;
       grid-template-columns: 200px auto;
@@ -67,7 +64,6 @@ body{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 68px;
     }
-    
 }
 
 /*end of grid stylings*/
@@ -95,3 +91,54 @@ body{
     
 }
 
+.contentbox{
+    border: 5px grey groove;
+    background:lightgray;
+    width: 300px ;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    display:grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 40px 40px 40px 40px 40px;
+}
+
+.contentbox .contentheading{
+    grid-column-start:span 2;
+    text-align: center;
+}
+
+.contentheading{
+    font-weight: bold;
+}
+.numberinput{
+    height:20px;
+}
+.outputnumbers{
+    border:1px black solid;
+    height: 20px;
+    width: auto;
+}
+
+.holdingbox{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.numbertablesholderbox{
+    margin-top: 25px;
+    text-align: center;
+    align-content: center;
+}
+.numbertable{
+    border:1px black groove;
+    margin: 15px auto;
+    background-color: red;
+    width:600px;
+    height:200px;
+}
+
+.innerpageheading{
+    font-weight: bold;
+    font-size: 30px;
+}
