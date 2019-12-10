@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
-
+    <script src="scripts_converters.js"></script>
 </head>
 <body>
     <h1 class="innerpageheading">A tool for converting numbers between numbering systems</h1>
@@ -10,13 +10,13 @@
         <div class="contentbox">
             <div class="contentheading">Decimal to other numbering systems</div>
             <div>Decimal</div>
-            <input class="numberinput"type="text" name="decimal" placeholder="Decimal">
+            <input class="numberinput"type="text" name="decimal" placeholder="Decimal" id="inputdecimal" onchange="convertDB(); convertDO(); convertDH(); ">
             <div>Binary</div>
-            <div class="outputnumbers"></div>
+            <div class="outputnumbers" id="DBout"></div>
             <div>Octal</div>
-            <div class="outputnumbers"></div>
+            <div class="outputnumbers" id="DOout"></div>
             <div>Hexadecimal</div>
-            <div class="outputnumbers"></div>
+            <div class="outputnumbers" id="DHout"></div>
         </div>
 
         <div class="contentbox">
