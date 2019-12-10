@@ -1,17 +1,48 @@
-var permutation_with_repetition = 0
-var permutation_without_repetition = 1
-var combination_with_repetition = 0 
-var combination_without_repetition = 0 
-function permutations_repetition_allowed(chars, places) {
+
+
+
+function calculate() {
+    let permutations_button = document.getElementById("perms")
+    let combinations_button = document.getElementById("combs")
+    if ( permutations_button.checked == true){
+        if (document.getElementById("repetition").value == "Repetition") {
+            permutations_repetition_allowed()
+        }
+        else if ( document.getElementById("repetition").value == "No Repetition" ) {
+            permutations_repetition_not_allowed()
+        }
+    }
+    else if (combinations_button.checked == true) {
+        if (document.getElementById("repetition").value == "Repetition") {
+            combinations_repetition_allowed()
+        }
+        else if (document.getElementById("repetition").value == "No Repetition") {
+            combinations_repetition_not_allowed()
+        } 
+    }
+}
+
+function permutations_repetition_allowed() {
+    var permutation_with_repetition = 0
+    let chars = document.getElementById("input1").value
+    let places = document.getElementById("input2").value
+    let result = document.getElementById("answer")
     if (isNaN(chars) || isNaN(places)) {
         permutation_with_repetition = "error"
     }
     else {
         permutation_with_repetition = chars ** places
     }
+
+    result.innerHTML = permutation_with_repetition
 }
 
-function permutations_repetition_not_allowed(chars, places) {
+function permutations_repetition_not_allowed() {
+    var permutation_without_repetition = 1
+    let chars = document.getElementById("input1").value
+    let places = document.getElementById("input2").value
+    let result = document.getElementById("answer")
+
     let count = 0
     if (isNaN(chars) || isNaN(places)) {
         permutation_with_repetition = "error"
@@ -22,10 +53,18 @@ function permutations_repetition_not_allowed(chars, places) {
             count++
         }
     }
+    result.innerHTML = permutation_without_repetition
 }
 
 
-function combinations_repetition_allowed (chars, places){
+function combinations_repetition_allowed (){
+    var combination_with_repetition = 0 
+    let chars = document.getElementById("input1").value
+    let places = document.getElementById("input2").value
+    let result = document.getElementById("answer")
+    chars = parseInt(chars)
+    places = parseInt(places)
+
     let positions = places + (chars - 1)
     let charsM = chars - 1
     let fact_positions = 1
@@ -55,9 +94,16 @@ function combinations_repetition_allowed (chars, places){
 
     }
 
+    result.innerHTML = combination_with_repetition
+
 }
 
-function combinations_repetition_not_allowed(chars, places) {
+function combinations_repetition_not_allowed() {
+    
+    var combination_without_repetition = 0 
+    let chars = document.getElementById("input1").value
+    let places = document.getElementById("input2").value
+    let result = document.getElementById("answer")
 
     let fact_chars = 1 
     let fact_places = 1
@@ -85,9 +131,7 @@ function combinations_repetition_not_allowed(chars, places) {
         }
         combination_without_repetition = fact_chars / (fact_places * fact_chars_places)
     }
+    result.innerHTML = combination_without_repetition
 }
 
 
-
-permutations_repetition_not_allowed(8, 8)
-console.log(permutation_without_repetition)

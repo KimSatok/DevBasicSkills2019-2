@@ -2,27 +2,32 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
+    <script src="comb_and_perms.js"></script>
 
 </head>
 <body>
     <h1 class="innerpageheading">A tool for calculating combinations or permutations</h1>
     <div class="contentsinglebox">
+        <br>
             <div>
-                Number to calculate
-                <input class="pcnumber" type="text" name="pcnumber" placeholder="Number">
-            </div><div>
-            <input checked type="radio" name ="calculationtype" value="permutation">Permutations
-            <input type="radio" name ="calculationtype" value="permutation">Combinatorics
-            <select id="repetition" onChange="selectrepetitiontype()">
-                    <option selected>Repetition</option>
-                    <option>No Repetition</option>
+                Charachters
+                <input class="pcnumber" type="text" name="pcnumber" placeholder="Number" id="input1" >
+                Positions
+                <input class="pcnumber" type="text" name="pcnumber" placeholder="Number" id="input2" >
+                <button onclick="calculate()">calculate</button>
+            </div><br><div>
+            <input checked type="radio" name ="calculationtype" value="permutation" id="perms">Permutations
+            <input type="radio" name ="calculationtype" value="permutation" id="combs">Combinatorics
+            <select id="repetition" >
+                    <option selected >Repetition</option>
+                    <option >No Repetition</option>
             </select>
-            <select id="sampling" onChange="selectsamplingtype()">
+            <select id="sampling" >
                     <option selected>Replacement</option>
                     <option>No Replacement</option>
             </select>
             </div>
-            <div class="pcanswerbox">
+            <div class="pcanswerbox" id="answer">
                 this is the answer box for this page
             </div>
 
