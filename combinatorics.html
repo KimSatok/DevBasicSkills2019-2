@@ -5,5 +5,27 @@
 
 </head>
 <body>
-    <img src="images/chocobo.png">
+    <h1 class="innerpageheading">A tool for calculating combinations or permutations</h1>
+    <div class="contentsinglebox">
+            <div>
+                Number to calculate
+                <input class="pcnumber" type="text" name="pcnumber" placeholder="Number">
+            </div><div>
+            <input checked type="radio" name ="calculationtype" value="permutation">Permutations
+            <input type="radio" name ="calculationtype" value="permutation">Combinatorics
+            <select id="repetition" onChange="selectrepetitiontype()">
+                    <option selected>Repetition</option>
+                    <option>No Repetition</option>
+            </select>
+            <select id="sampling" onChange="selectsamplingtype()">
+                    <option selected>Replacement</option>
+                    <option>No Replacement</option>
+            </select>
+            </div>
+            <div class="pcanswerbox">
+                this is the answer box for this page
+            </div>
+
+
+    </div>
 </body>
