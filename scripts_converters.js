@@ -1,21 +1,4 @@
 
-var hexidecimal_from_decimal = ""
-
-
-
-var decimal_from_binary = 0
-var octal_from_binary = 0
-var hexidecimal_from_binary = 0
-
-
-var decimal_from_octal = 0
-var binary_from_octal = 0
-var hexidecimal_from_octal = 0
-
-
-var decimal_from_hexidecimal = 0
-var binary_from_hexidecimal = 0
-var octal_from_hexidecimal = 0
 //Please do not use decimal numbers bigger than 16 symbols, I guess
 function convertDB() {
     var binary_from_decimal = ""
@@ -59,7 +42,7 @@ function convertDB() {
 }
 
 function convertDO() {
-    var octar =[]
+    let octar =[]
     var octal_from_decimal = ""
     let dec2 = document.getElementById("inputdecimal").value
     let result = document.getElementById("DOout")
@@ -77,7 +60,7 @@ function convertDO() {
 
 
 function convertDH() {
-    var hexar =[]
+    let hexar =[]
     var hexidecimal_from_decimal = ""
     let dec3 = document.getElementById("inputdecimal").value
     let result = document.getElementById("DHout")
@@ -117,7 +100,11 @@ function convertDH() {
 
 
 
-function convertBD(bin) {
+function convertBD() {
+    var decimal_from_binary = 0
+    let bin = document.getElementById("inputbinary").value
+    let result = document.getElementById("BDout")
+
     let count = 0
     let stringbin = bin.toString(10)
     let bin2 = [];
@@ -140,10 +127,17 @@ function convertBD(bin) {
                 decimal_from_binary = "error"
             }
         }
+
     }
+
+    result.innerHTML = decimal_from_binary
 }
 
-function convertBO (bin) {
+function convertBO () {
+    var octal_from_binary = 0
+    let bin = document.getElementById("inputbinary").value
+    let result = document.getElementById("BOout")
+
     let count = 0
     let stringbin = bin.toString(10)
     let bin2 = [];
@@ -166,11 +160,27 @@ function convertBO (bin) {
                 octal_from_binary = "error"
             }
         }
+    
+        }
+
+        let octar =[]
+        dec2 = octal_from_binary
+        octal_from_binary = []
+        for (let i = dec2; i > 0; i=parseInt(i/8)){
+            octar.push(i % 8)
+        }
+        octar = octar.reverse()
+        for(let l = 0 ; l < octar.length ; l++) {
+            octal_from_binary = octal_from_binary + octar[l]
     }
-    octal_from_binary= octal_from_binary.toString(8);
+    result.innerHTML = octal_from_binary
 }
 
-function convertBH (bin){
+function convertBH (){
+    var hexidecimal_from_binary = 0
+    let bin = document.getElementById("inputbinary").value
+    let result = document.getElementById("BHout")
+
     let count = 0
     let stringbin = bin.toString(10)
     let bin2 = [];
@@ -194,7 +204,39 @@ function convertBH (bin){
             }
         }
     }
-    hexidecimal_from_binary = hexidecimal_from_binary.toString(16);
+    let hexar =[]
+    let dec3 = hexidecimal_from_binary
+    hexidecimal_from_binary = ""
+    for (let i = dec3; i > 0; i=parseInt(i/16)){
+        if ( i % 16 == 10) {
+            hexar.push("A")
+        }
+        if ( i % 16 == 11) {
+            hexar.push("B")
+        }
+        if ( i % 16 == 12) {
+            hexar.push("C")
+        }
+        if ( i % 16 == 13) {
+            hexar.push("D")
+        }
+        if ( i % 16 == 14) {
+            hexar.push("E")
+        }
+        if ( i % 16 == 15) {
+            hexar.push("F")
+        }
+        else if (i % 16 == 1 ||i % 16 == 0 ||i % 16 == 2 ||i % 16 == 3 ||i % 16 == 4 ||i % 16 == 5 ||i % 16 == 6 ||i % 16 == 7 ||i % 16 == 8 ||i % 16 == 9) {
+        hexar.push(i % 16)
+        }
+    }
+    hexar = hexar.reverse()
+    for(let l = 0 ; l < hexar.length ; l++) {
+        hexidecimal_from_binary = hexidecimal_from_binary + hexar[l]
+
+    }
+    result.innerHTML = hexidecimal_from_binary
+    
 }
 
 
@@ -204,7 +246,11 @@ function convertBH (bin){
 
 
 
-function convertOD(oct) {
+function convertOD() {
+    var decimal_from_octal = 0
+    let oct = document.getElementById("inputoctal").value
+    let result = document.getElementById("ODout")
+
     let stringoct = oct.toString(10)
     let count = 0;
     let oct2 = []
@@ -224,9 +270,14 @@ function convertOD(oct) {
         }
     }
 
+    result.innerHTML = decimal_from_octal
 }
 
-function convertOB (oct) {
+function convertOB () {
+    var binary_from_octal = 0
+    let oct = document.getElementById("inputoctal").value
+    let result = document.getElementById("OBout")
+
     let stringoct = oct.toString(10)
     let count = 0;
     let oct2 = []
@@ -282,9 +333,15 @@ function convertOB (oct) {
         binary_from_octal = "error"
     }
 
+    result.innerHTML = binary_from_octal
+
 }
 
-function convertOH (oct) {
+function convertOH () {
+    var  hexidecimal_from_octal = 0
+    let oct = document.getElementById("inputoctal").value
+    let result = document.getElementById("OHout")
+
     let stringoct = oct.toString(10)
     let count = 0;
     let oct2 = []
@@ -303,17 +360,60 @@ function convertOH (oct) {
             hexidecimal_from_octal = "error"
         }
     }
-    hexidecimal_from_octal = hexidecimal_from_octal.toString(16)
+
+    let hexar =[]
+    dec3 = hexidecimal_from_octal
+    hexidecimal_from_octal = ""
+
+    for (let i = dec3; i > 0; i=parseInt(i/16)){
+        if ( i % 16 == 10) {
+            hexar.push("A")
+        }
+        if ( i % 16 == 11) {
+            hexar.push("B")
+        }
+        if ( i % 16 == 12) {
+            hexar.push("C")
+        }
+        if ( i % 16 == 13) {
+            hexar.push("D")
+        }
+        if ( i % 16 == 14) {
+            hexar.push("E")
+        }
+        if ( i % 16 == 15) {
+            hexar.push("F")
+        }
+        else if (i % 16 == 1 ||i % 16 == 0 ||i % 16 == 2 ||i % 16 == 3 ||i % 16 == 4 ||i % 16 == 5 ||i % 16 == 6 ||i % 16 == 7 ||i % 16 == 8 ||i % 16 == 9) {
+        hexar.push(i % 16)
+        }
+    }
+    hexar = hexar.reverse()
+    for(let l = 0 ; l < hexar.length ; l++) {
+        hexidecimal_from_octal = hexidecimal_from_octal + hexar[l]
+    }
+    result.innerHTML = hexidecimal_from_octal
 }
 
 
 
 
-function convertHD(hex){
+function convertHD(){
+    var decimal_from_hexidecimal = 0
+    let hex = document.getElementById("inputhex").value
+    let result = document.getElementById("HDout")
+
+
     decimal_from_hexidecimal = parseInt(hex, 16)
+    result.innerHTML = decimal_from_hexidecimal
 }
 
-function convertHB (hex){
+function convertHB (){
+
+    var binary_from_hexidecimal = 0
+    let hex = document.getElementById("inputhex").value
+    let result = document.getElementById("HBout")
+
     binary_from_hexidecimal = parseInt(hex, 16)
 
     let power = 1;
@@ -352,11 +452,27 @@ function convertHB (hex){
     else {
         binary_from_hexidecimal = "error"
     }
+    result.innerHTML = binary_from_hexidecimal
 }
 
-function convertHO (hex) {
+function convertHO () {
+    var octal_from_hexidecimal = 0
+    let hex = document.getElementById("inputhex").value
+    let result = document.getElementById("HOout")
     octal_from_hexidecimal = parseInt(hex, 16)
-    octal_from_hexidecimal = octal_from_hexidecimal.toString(8)
+
+    let octar =[]
+    let dec2 = octal_from_hexidecimal
+    octal_from_hexidecimal = ""
+    for (let i = dec2; i > 0; i=parseInt(i/8)){
+        octar.push(i % 8)
+    }
+    octar = octar.reverse()
+    for(let l = 0 ; l < octar.length ; l++) {
+        octal_from_hexidecimal = octal_from_hexidecimal + octar[l]
+
+    }
+    result.innerHTML = octal_from_hexidecimal
 }
 
 
