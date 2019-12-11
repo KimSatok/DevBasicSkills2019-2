@@ -11,7 +11,7 @@
     <script>
             function numbersystemoutput()
             {
-                 document.getElementById("table").hidden = !document.getElementById("table").hidden 
+                 document.getElementById("tables").hidden = !document.getElementById("tables").hidden ; 
                
            var i = 0 ; 
            Decimal="";
@@ -30,7 +30,9 @@
             document.getElementById("Binary").innerHTML =  Binary;
             document.getElementById("Octal").innerHTML = Octal ;
             document.getElementById("Hexadecimal").innerHTML = Hexadecimal ;
+            
             }
+            
         </script>
 </head>
 <body>
@@ -38,8 +40,8 @@
 
 
 <h1> This button can print a numeric system from 1 to 50</h1>
-<center><button onclick="numbersystemoutput()"> Press </button></center>
-<table id="tables" style="width: 100%;" hidden>
+<center><button onclick="numbersystemoutput()" class="button"> Press </button></center>
+<table id="tables" style="width: 100%;" hidden >
 <tbody >
     <tr>
         <th >Decimal</th>
