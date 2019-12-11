@@ -82,7 +82,7 @@ body{
 
 .frame {
     grid-area: frame;
-    background-color: blueviolet
+    background-color: rgb(19, 232, 198);
 }
 
 .pageframe{
@@ -158,4 +158,5 @@ body{
     font-weight: bold;
     font-size: 30px;
     margin: 10px;
+    text-align: center;
 }
