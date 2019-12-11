@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
-
+    <script src="randintdist.js"></script>
 </head>
 <body>
     <h1 class="innerpageheading">Random Values</h1>
@@ -12,12 +12,9 @@
             <input class="rvnumber" type="text" name="rvnumber" placeholder="Max Value" id="inputmax" >
             <input class="rvnumber" type="text" name="rvnumber" placeholder="No. of Generations" id="inputgenerations" >
             <br>
-            <button class="button1 rvbutton" onclick="">Calculate</button>
+            <button class="button1 rvbutton" onclick="generator()">Calculate</button>
         </div>
-        <div class="rvanswerbox">
-            THIS IS THE FUGGEN ANSWER BOX it should scale with textTHIS IS THE FUGGEN ANSWER BOX it should scale with textTHIS IS THE FUGGEN ANSWER BOX it should scale with textTHIS IS THE FUGGEN ANSWER BOX it should scale with textTHIS IS THE FUGGEN ANSWER BOX it should scale with text
-            and it does, the background box does too.
-
+        <div class="rvanswerbox" id="output">
         </div>
     </div>
 </body>

@@ -2,97 +2,83 @@ var conjuction_result
 var disjunction_result
 var negation_result
 var exclusive_result
+
+
+function generate2(){
+    if (document.getElementById("truthX").value == "AND") {
+        AND()
+    }
+    else if (document.getElementById("truthX").value == "OR"){
+        OR()
+    }
+    else if (document.getElementById("truthX").value == "NAND"){
+        NAND()
+    }
+    else if (document.getElementById("truthX").value == "NOR"){
+        NOR()
+    }
+    else if (document.getElementById("truthX").value == "XOR"){
+        XOR ()
+    }
+    else if (document.getElementById("truthX").value == "XNOR"){
+        XNOR ()
+    }
+
+}
 // logical *
-function conjuction() {
-    let x = document.getElementById("ConX").value
-    let y = document.getElementById("ConY").value
-    let result = document.getElementById("ConR")
+function AND() {
+    let result = document.getElementById("truthtablebox")
 
-    if (x == "t" || x == "T" || x== "true" || x=="True" || x == "1") {
-        x = true
-    }
-    else if (x == "f" || x == "F" || x == "0" || x == "False" || x=="false") {
-        x = false
-    }
-    if (y == "t" || y == "T" || y== "true" || y=="True" || y == "1") {
-        y = true
-    }
-    else if (y == "f" || y == "F" || y == "0" || y== "false" || y=="False") {
-        y = false
-    }
+    let table = ""
+    table = "1 &ensp; &#8743; &ensp; 1 &ensp; = &ensp; " + (true & true) + ("<br>") + "1 &ensp; &#8743; &ensp; 0 &ensp;  = &ensp; " + (true & false) + ("<br>") + "0 &ensp; &#8743; &ensp; 1 &ensp;  = &ensp; " + (false & true) + ("<br>") + "0 &ensp; &#8743; &ensp; 0 &ensp; = &ensp; " + (false & false)
 
-    
-    if (x * y == true){
-        conjuction_result = " true"
-    }
-    else if (x * y == false){
-        conjuction_result = " false"
-    }
-    
-    result.innerHTML = conjuction_result
+    result.innerHTML = table
 }
 
 //logical +
-function disjunction() {
-    let x = document.getElementById("DisX").value
-    let y = document.getElementById("DisY").value
-    let result = document.getElementById("DisR")
+function OR() {
+    let result = document.getElementById("truthtablebox")
 
-    if (x == "t" || x == "T" || x== "true" || x=="True" || x == "1") {
-        x = true
-    }
-    else if (x == "f" || x == "F" || x == "0" || x == "False" || x=="false") {
-        x = false
-    }
-    if (y == "t" || y == "T" || y== "true" || y=="True" || y == "1") {
-        y = true
-    }
-    else if (y == "f" || y == "F" || y == "0" || y== "false" || y=="False") {
-        y = false
-    }
-    let a = x + y
+    let table = ""
+    table = "1 &ensp; &#8744; &ensp; 1 &ensp; = &ensp; " + (true | true) + ("<br>") + "1 &ensp; &#8744; &ensp; 0 &ensp;  = &ensp; " + (true + false) + ("<br>") + "0 &ensp; &#8744; &ensp; 1 &ensp;  = &ensp; " + (false + true) + ("<br>") + "0 &ensp; &#8744; &ensp; 0 &ensp; = &ensp; " + (false + false)
 
-    if (a == true || a == 2){
-        disjunction_result = " true"
-    }
-    else if (a == false){
-        disjunction_result = " false"
-    }
-    
-    result.innerHTML = disjunction_result
+    result.innerHTML = table
 }
 
 
 
 // XOR
-function exclusive (){
-    let x = document.getElementById("ExX").value
-    let y = document.getElementById("ExY").value
-    let result = document.getElementById("ExR")
-    if (x == "t" || x == "T" || x== "true" || x=="True" || x == "1") {
-        x = true
-    }
-    else if (x == "f" || x == "F" || x == "0" || x == "False" || x=="false") {
-        x = false
-    }
-    if (y == "t" || y == "T" || y== "true" || y=="True" || y == "1") {
-        y = true
-    }
-    else if (y == "f" || y == "F" || y == "0" || y== "false" || y=="False") {
-        y = false
-    }
+function XOR (){
+    let result = document.getElementById("truthtablebox")
 
-   
-        if ((!x * y) + (x * !y) == true){
-            exclusive_result = " true"
-        }
-        else if ((!x * y) + (x * !y) == false){
-            exclusive_result = " false"
-        }
-    
-    result.innerHTML = exclusive_result
+    let table = ""
+    table = "1 &ensp; &oplus;  &ensp; 1 &ensp; = &ensp; " + (true ^ true) + ("<br>") + "1 &ensp; &oplus;  &ensp; 0 &ensp;  = &ensp; " + (true ^ false) + ("<br>") + "0 &ensp; &oplus;  &ensp; 1 &ensp;  = &ensp; " + (false ^ true) + ("<br>") + "0 &ensp; &oplus;  &ensp; 0 &ensp; = &ensp; " + (false ^ false)
+
+
+    result.innerHTML = table
 }
 
+function XNOR () {
+    let result = document.getElementById("truthtablebox")
 
-exclusive("t", "T") 
-console.log(exclusive_result)
+    let table = ""
+    table = " &#172;(1 &ensp; &oplus; &ensp; 1) &ensp; = &ensp; " + "1" + ("<br>") + "&#172;(1 &ensp; &oplus; &ensp; 0) &ensp;  = &ensp; " + (true * false) + ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 1) &ensp;  = &ensp; " + (false * true) + ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 0) &ensp; = &ensp; " + ("1")
+    result.innerHTML = table
+}
+
+function NOR () {
+    let result = document.getElementById("truthtablebox")
+
+    let table = ""
+    table = " &#172;(1 &ensp; &oplus; &ensp; 1) &ensp; = &ensp; " + "0" + ("<br>") + "&#172;(1 &ensp; &oplus; &ensp; 0) &ensp;  = &ensp; " + "0" + ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 1) &ensp;  = &ensp; " + "0" + ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 0) &ensp; = &ensp; " + ("1")
+    result.innerHTML = table
+}
+
+function NAND () {
+    let result = document.getElementById("truthtablebox")
+
+    let table = ""
+    table = " &#172;(1 &ensp; &#8744; &ensp; 1) &ensp; = &ensp; " + "0" + ("<br>") + "&#172;(1 &ensp; &#8744; &ensp; 0) &ensp;  = &ensp; " + (true + false) + ("<br>") + "&#172;(0 &ensp; &#8744; &ensp; 1) &ensp;  = &ensp; " + (false + true) + ("<br>") + "&#172;(0 &ensp; &#8744; &ensp; 0) &ensp; = &ensp; " + ("1")
+
+    result.innerHTML = table
+}

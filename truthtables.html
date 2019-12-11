@@ -6,11 +6,11 @@
 
 
 </head>
-<body>
+<body onload = "generate2()">
     <h1 class="innerpageheading">Simple truth tables</h1>
     <div class="contentsinglebox">
         <div class="truthXY">
-            X   <select id="truthX" >
+            X   <select id="truthX" onchange="generate2()" >
                     <option selected >AND</option>
                     <option >OR</option>
                     <option >NAND</option>
@@ -19,7 +19,7 @@
                     <option >XNOR</option>
                 </select>
             Y = Q
-            <div class="truthtablebox">
+            <div class="truthtablebox" id="truthtablebox">
                     answer box
             </div>
         </div>
