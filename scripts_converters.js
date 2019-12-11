@@ -474,6 +474,29 @@ function convertHO () {
     }
     result.innerHTML = octal_from_hexidecimal
 }
+function numbersystemoutput()
+            {
+                 document.getElementById("tables").hidden = !document.getElementById("tables").hidden ; 
+               
+           var i = 0 ; 
+           Decimal="";
+           Binary="";
+           Octal="";
+           Hexadecimal="";
+
+            for (i = 0 ; i <=50 ; i ++)
+            {  
+                Decimal =Decimal + i.toString(10) + "<br>";
+                Binary =Binary + i.toString(2) + "<br>";
+                Octal =Octal + i.toString(8) + "<br>" ; 
+                Hexadecimal =Hexadecimal+ i.toString(16) + "<br>"; 
+            }
+            document.getElementById("Decimal").innerHTML = Decimal;
+            document.getElementById("Binary").innerHTML =  Binary;
+            document.getElementById("Octal").innerHTML = Octal ;
+            document.getElementById("Hexadecimal").innerHTML = Hexadecimal ;
+            
+            }
 
 
 

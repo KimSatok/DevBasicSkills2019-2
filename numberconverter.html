@@ -1,16 +1,19 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
     <script src="scripts_converters.js"></script>
 </head>
+
 <body>
     <h1 class="innerpageheading">Number converter</h1>
     <div class="holdingbox">
         <div class="contentbox">
             <div class="contentheading">Decimal to other numbering systems</div>
             <div>Decimal</div>
-            <input class="numberinput"type="text" name="decimal" placeholder="Decimal" id="inputdecimal" onchange="convertDB(); convertDO(); convertDH(); ">
+            <input class="numberinput" type="text" name="decimal" placeholder="Decimal" id="inputdecimal"
+                onchange="convertDB(); convertDO(); convertDH(); ">
             <div>Binary</div>
             <div class="outputnumbers" id="DBout"></div>
             <div>Octal</div>
@@ -22,7 +25,8 @@
         <div class="contentbox">
             <div class="contentheading">Binary to other numbering systems</div>
             <div>Binary</div>
-            <input class="numberinput" type="text" name="binary" placeholder="Binary" id="inputbinary" onchange="convertBD(); convertBO(); convertBH(); ">
+            <input class="numberinput" type="text" name="binary" placeholder="Binary" id="inputbinary"
+                onchange="convertBD(); convertBO(); convertBH(); ">
             <div>Decimal</div>
             <div class="outputnumbers" id="BDout"></div>
             <div>Octal</div>
@@ -34,7 +38,8 @@
         <div class="contentbox">
             <div class="contentheading">Decimal to other numbering systems</div>
             <div>Octal</div>
-            <input class="numberinput" type="text" name="octal" placeholder="Octal" id="inputoctal" onchange="convertOD(); convertOB(); convertOH(); " >
+            <input class="numberinput" type="text" name="octal" placeholder="Octal" id="inputoctal"
+                onchange="convertOD(); convertOB(); convertOH(); ">
             <div>Binary</div>
             <div class="outputnumbers" id="OBout"></div>
             <div>Decimal</div>
@@ -46,7 +51,8 @@
         <div class="contentbox">
             <div class="contentheading">Decimal to other numbering systems</div>
             <div>Hexadecimal</div>
-            <input class="numberinput" type="text" name="hexadecimal" placeholder="Hexadecimal" id="inputhex" onchange="convertHD(); convertHB(); convertHO(); ">
+            <input class="numberinput" type="text" name="hexadecimal" placeholder="Hexadecimal" id="inputhex"
+                onchange="convertHD(); convertHB(); convertHO(); ">
             <div>Binary</div>
             <div class="outputnumbers" id="HBout"></div>
             <div>Octal</div>
@@ -57,11 +63,37 @@
 
     </div>
     <div class="numbertablesholderbox">
-    <button name="tablebutton">Show Tables</button>
-    <div class="numbertable">
-        THIS IS A FUGGEN PLACEHOLDER BOX TO SHOW WHERE THE FUG THE NUMBER TABLE WILL SHOW UP AT,SHOW TABLES BUTTON WILL GENERATE A NUMBERS TABLE IN THIS LOCATION AND ON RECLICK IT WILL REMOVE THE TABLE
-    </div>
-    </div>
+        <h1> This button can print a numeric system from 1 to 50</h1>
+
+        <center><button onclick="numbersystemoutput()" class="button"> Press </button></center>
+        <table id="tables" style="width: 100%;" hidden>
+            <tbody>
+                <tr>
+                    <th>Decimal</th>
+                    <th>Binary</th>
+                    <th>Octal</th>
+                    <th>Hexadecimal</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="Decimal"></div>
+                    </td>
+
+                    <td>
+                        <div id="Binary"></div>
+                    </td>
+                    <td>
+                        <div id="Octal"></div>
+                    </td>
+                    <td>
+                        <div id="Hexadecimal"></div>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
 
 
 </body>
