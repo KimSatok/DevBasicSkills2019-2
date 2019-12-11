@@ -119,7 +119,8 @@ body{
     height: auto;
     margin: 10px;
     background-color: lightgray;
-    min-height: 300px;
+    min-height: 200px;
+    text-align: center;
 }
 .pcanswerbox{
     border:1px black solid;
@@ -180,4 +181,14 @@ body{
     margin: 10px;
     background-color: seashell;
     width: auto;
+}
+.rvnumberbox{
+    margin: 15px;
+}
+.rvanswerbox{
+    margin: 15px;
+    height: auto;
+    width: auto;
+    border: 1px black solid;
+    background-color:seashell
 }
