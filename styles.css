@@ -192,3 +192,7 @@ body{
     border: 1px black solid;
     background-color:seashell
 }
+
+.rvbutton{
+    margin-top: 15px;
+}
