@@ -82,7 +82,7 @@ body{
 
 .frame {
     grid-area: frame;
-    background-color: blueviolet
+    background-color: rgb(19, 232, 198);
 }
 
 .pageframe{
@@ -116,14 +116,17 @@ body{
 .contentsinglebox{
     border:5px grey groove;
     width: auto;
-    height: 200px;
+    height: auto;
     margin: 10px;
     background-color: lightgray;
+    min-height: 200px;
+    text-align: center;
 }
 .pcanswerbox{
     border:1px black solid;
     background-color: seashell;
-    margin:5px;
+    margin: 5px;
+    margin-top:25px;
     padding:5px;
 }
 .numberinput{
@@ -147,15 +150,49 @@ body{
     align-content: center;
 }
 .numbertable{
-    border:1px black groove;
+    border:5px grey groove;
     margin: 15px auto;
-    background-color: red;
-    width:600px;
-    height:200px;
+    background-color: lightgrey;
+    width:680px 
+}
+.button1{
+    border: 2px grey solid;
+    padding: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
 }
 
 .innerpageheading{
     font-weight: bold;
     font-size: 30px;
     margin: 10px;
+    text-align: center;
+}
+
+.truthXY{
+    text-align: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+.truthtablebox{
+    border: 1px black solid;
+    margin: 10px;
+    background-color: seashell;
+    width: auto;
+}
+.rvnumberbox{
+    margin: 15px;
+}
+.rvanswerbox{
+    margin: 15px;
+    height: auto;
+    width: auto;
+    border: 1px black solid;
+    background-color: seashell
+}
+
+.rvbutton{
+    margin-top: 15px;
 }
