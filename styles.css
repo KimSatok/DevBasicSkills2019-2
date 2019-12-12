@@ -104,6 +104,7 @@ body{
     display:grid;
     grid-template-columns: 150px 150px;
     grid-template-rows: 40px 40px 40px 40px 40px;
+    border-radius: 10px;
 }
 
 .contentbox .contentheading{
@@ -123,6 +124,7 @@ body{
     background-color: lightgray;
     min-height: 200px;
     text-align: center;
+    border-radius: 10px;
 }
 .pcanswerbox{
     border:1px black solid;
