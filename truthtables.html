@@ -4,28 +4,26 @@
     <link rel="stylesheet" href="styles.css">
     <script src="truthtables.js"></script>    
 
-    <title>Math Master 9000</title>
 
 </head>
-<body>
-    <div style=" width : 100%; height: 100vh; ">
-        <div style="display:flex; width: 100%; height: 100px; justify-content: space-around; align-items: center;">
-                <input type="text" id="ConX" placeholder="first variable"  style="height: 25px;">
-                <input type="text" id="ConY" placeholder="second variable" style="height: 25px;">
-                <button onclick="conjuction()" style="height: 30px"> Run </button>
-                <div style="width:100px; height: 25px; background-color : white;"><p id="ConR"></p></div>
+<body onload = "generate2()">
+    <h1 class="innerpageheading">Simple truth tables</h1>
+    <div class="contentsinglebox">
+        <div class="truthXY">
+            X   <select id="truthX" onchange="generate2()" >
+                    <option selected >AND</option>
+                    <option >OR</option>
+                    <option >NAND</option>
+                    <option >NOR</option>
+                    <option >XOR</option>
+                    <option >XNOR</option>
+                </select>
+            Y = Q
+            <div class="truthtablebox" id="truthtablebox">
+                    answer box
+            </div>
         </div>
-        <div style="display:flex; width: 100%; height: 100px; justify-content: space-around; align-items: center;">
-            <input type="text" id="DisX" placeholder="first variable"  style="height: 25px;">
-            <input type="text" id="DisY" placeholder="second variable" style="height: 25px;">
-            <button onclick="disjunction()" style="height: 30px"> Run </button>
-            <div style="width:100px; height: 25px; background-color : white;"><p id="DisR"></p></div>
-        </div>
-            <div style="display:flex; width: 100%; height: 100px; justify-content: space-around; align-items: center;">
-            <input type="text" id="ExX" placeholder="first variable"  style="height: 25px;">
-            <input type="text" id="ExY" placeholder="second variable" style="height: 25px;">
-            <button onclick="exclusive()" style="height: 30px"> Run </button>
-            <div style="width:100px; height: 25px; background-color : white;"><p id="ExR"></p></div>
-        </div>
+
+        
     </div>
 </body>

@@ -1,7 +1,13 @@
-var numbers = []
-function generator(min, max, cycles) {
+
+function generator() {
+    let min = document.getElementById("inputmin").value
+    let max = document.getElementById("inputmax").value
+    let cycles = document.getElementById("inputgenerations").value
+    let output2 = document.getElementById("output")
+    var numbers = []
     let count = 0
     let number
+    let output = ""
     while (count < cycles) {
         number = Math.floor(Math.random() * (max - min) + min)
         numbers.push(number)
@@ -13,8 +19,9 @@ function generator(min, max, cycles) {
     }
 
     for (var key in result) {
-       console.log ('number ' + key + ' appears ' + result[key] + " times");
-    }
-}
+       output = output + 'number ' + key + ' appears ' + result[key] + " times" + ("<br>")  ;
 
-generator(1, 5, 10)
+    }
+    
+    output2.innerHTML = output
+}
