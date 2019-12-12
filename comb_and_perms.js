@@ -1,25 +1,27 @@
-
+function show( ){
+    if (document.getElementById("perms").checked == true) {
+        document.getElementById("sampling").style.visibility = 'visible' 
+    }
+    else if (document.getElementById("combs").checked == true){
+        document.getElementById("sampling").style.visibility = 'hidden'
+    }
+}
 
 
 function calculate() {
     let permutations_button = document.getElementById("perms")
     let combinations_button = document.getElementById("combs")
-    if ( permutations_button.checked == true){
-        if (document.getElementById("repetition").value == "Repetition") {
+    if ( permutations_button.checked == true){      
+        if (document.getElementById("sampling").value == "Replacement") {
             permutations_repetition_allowed()
         }
-        else if ( document.getElementById("repetition").value == "No Repetition" ) {
+        else if ( document.getElementById("sampling").value == "No Replacement" ) {
             permutations_repetition_not_allowed()
         }
     }
     else if (combinations_button.checked == true) {
-        if (document.getElementById("repetition").value == "Repetition") {
-            combinations_repetition_allowed()
-        }
-        else if (document.getElementById("repetition").value == "No Repetition") {
-            combinations_repetition_not_allowed()
-        } 
-    }
+        combinations_repetition_not_allowed()
+}
 }
 
 function permutations_repetition_allowed() {

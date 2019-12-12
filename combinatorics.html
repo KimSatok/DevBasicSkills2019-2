@@ -5,7 +5,7 @@
     <script src="comb_and_perms.js"></script>
 
 </head>
-<body>
+<body onload="show()">
     <h1 class="innerpageheading">Combinations and Permutations calculator</h1>
     <div class="contentsinglebox">
         <br>
@@ -16,12 +16,10 @@
                 <input class="pcnumber" type="text" name="pcnumber" placeholder="Number" id="input2" >
                 <button class="button1" onclick="calculate()">calculate</button>
             </div><br><div>
-            <input checked type="radio" name ="calculationtype" value="permutation" id="perms">Permutations
-            <input type="radio" name ="calculationtype" value="permutation" id="combs">Combinatorics
-            <select id="repetition" >
-                    <option selected >Repetition</option>
-                    <option >No Repetition</option>
+            <input checked type="radio" name ="calculationtype" value="permutation" id="perms" onchange="show()">Permutations
+            <input type="radio" name ="calculationtype" value="permutation" id="combs" onchange="show()">Combinatorics
             </select>
+            <br><br>
             <select id="sampling" >
                     <option selected>Replacement</option>
                     <option>No Replacement</option>

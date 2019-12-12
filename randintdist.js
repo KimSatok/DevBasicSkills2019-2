@@ -14,14 +14,20 @@ function generator() {
         count++
     }
     var result = {};
-    for(let i of numbers) {
-    result[i] = result[i] + 1 || 1;
+    for (let i of numbers) {
+        result[i] = result[i] + 1 || 1;
     }
 
     for (var key in result) {
-       output = output + 'number ' + key + ' appears ' + result[key] + " times" + ("<br>")  ;
+        if (result[key] == 1) {
+            output = output + 'number ' + key + ' appeared only once' + ("<br>");
+        }
+        else {
+            output = output + 'number ' + key + ' appeared ' + result[key] + " times" + ("<br>");
+
+        }
 
     }
-    
+
     output2.innerHTML = output
 }
