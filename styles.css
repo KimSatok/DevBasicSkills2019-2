@@ -187,10 +187,21 @@ body{
     background-color: seashell;
     width: auto;
 }
-.rvnumberbox{
+#result{
     margin: 15px;
 }
-.rvanswerbox{
+#result{
+    margin: 15px;
+    min-height: 20px;
+    height: auto;
+    width: auto;
+    border: 1px black solid;
+    background-color: seashell
+}
+#result2{
+    margin: 15px;
+}
+#result2{
     margin: 15px;
     min-height: 20px;
     height: auto;

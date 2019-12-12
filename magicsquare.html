@@ -2,6 +2,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
+    <script src="magictsquare.js"> </script>
 
 </head>
 <body>
@@ -12,25 +13,28 @@
         <div class="magic3">
             <div class="magicrules3">
                 <b>Rules</b><br>
-                    Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules 
+                    Used number from 1-9 to fill in the tables. You can use each number once <br>
+                    The purpose is to make the sum of all row and all column equal to one number.
+                    
 
             </div>
-            
-            <input class="magiccell" type="text" name="3x3number" placeholder="0" id="3x1" >
-            <input class="magiccell" type="text" name="3x3number" placeholder="0" id="3x2" >
-            <input class="magiccell" type="text" name="3x3number" placeholder="0" id="3x3" >
+            <form id="form1">
+            <input class="magiccell" type="tel" name="3x3number" placeholder="0" id="v1" >
+            <input class="magiccell" type="tel" name="3x3number" placeholder="0" id="v2" >
+            <input class="magiccell" type="tel" name="3x3number" placeholder="0" id="v3" >
 
-            <input class="magiccell" type="text" name="3x3number" placeholder="0" id="3x4" >
-            <input class="magiccell" type="text" name="3x3number" placeholder="0" id="3x5" >
-            <input class="magiccell" type="text" name="3x3number" placeholder="0" id="3x6" >
+            <input class="magiccell" type="tel" name="3x3number" placeholder="0" id="v4" >
+            <input class="magiccell" type="tel" name="3x3number" placeholder="0" id="v5" >
+            <input class="magiccell" type="tel" name="3x3number" placeholder="0" id="v6" >
 
-            <input class="magiccell" type="text" name="3x3number" placeholder="0" id="3x7" >
-            <input class="magiccell" type="text" name="3x3number" placeholder="0" id="3x8" >
-            <input class="magiccell" type="text" name="3x3number" placeholder="0" id="3x9" >
+            <input class="magiccell" type="tel" name="3x3number" placeholder="0" id="v7" >
+            <input class="magiccell" type="tel" name="3x3number" placeholder="0" id="v8" >
+            <input class="magiccell" type="tel" name="3x3number" placeholder="0" id="v9" >
+        </form>
         </div>
-        <button class="button1 magicbutton" onclick="">Restart</button>
-        <button class="button1 magicbutton" onclick="">Check</button>
-        <div class="rvanswerbox"></div>
+        <button class="button1 magicbutton" onclick="reset3x3()">Restart</button>
+        <button class="button1 magicbutton" onclick="three()">Check</button>
+        <div id="result"></div>
 
 
 
@@ -40,35 +44,37 @@
         <div class="magic4">
                 <div class="magicrules4">
                     <b>Rules</b><br>
-                    Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules Rules rules 
+                    Like 3x3 but a bit difference, instead 1-9 you can use 1 to 16.<br>
+                    The purpose is to make the sum of all row and all column equal to one number as well.
+
 
 
                 </div>
+<form id="form2">
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v1" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v2" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v3" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v4" >
 
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x1" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x2" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x3" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x4" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v5" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v6" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v7" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v8" >
 
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x5" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x6" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x7" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x8" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v9" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v10" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v11" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v12" >
 
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x9" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x10" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x11" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x12" >
-
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x13" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x14" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x15" >
-                <input class="magiccell" type="text" name="4x4number" placeholder="0" id="4x16" >
-
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v13" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v14" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v15" >
+                <input class="magiccell" type="tel" name="4x4number" placeholder="0" id="v16" >
+            </form>
         </div>
-        <button class="button1 magicbutton" onclick="">Restart</button>
-        <button class="button1 magicbutton" onclick="">Check</button>
-        <div class="rvanswerbox"></div>
+        <button class="button1 magicbutton" onclick="reset4x4()">Restart</button>
+        <button class="button1 magicbutton" onclick="four()">Check</button>
+        <div id="result2"></div>
 
 
         
