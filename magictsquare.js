@@ -40,27 +40,7 @@ function three() {
                 document.getElementById("result").innerHTML = "\n All blank space must be filled \n";
         }
 }
-function reset3x3() {
-        v1 = "";
-        v2 = "";
-        v3 = "";
-        v4 = "";
-        v5 = "";
-        v6 = "";
-        v7 = "";
-        v8 = "";
-        v9 = "";
-        v1 = parseInt(document.getElementById("v1").value);
-        v2 = parseInt(document.getElementById("v2").value);
-        v3 = parseInt(document.getElementById("v3").value);
-        v4 = parseInt(document.getElementById("v4").value);
-        v5 = parseInt(document.getElementById("v5").value);
-        v6 = parseInt(document.getElementById("v6").value);
-        v7 = parseInt(document.getElementById("v7").value);
-        v8 = parseInt(document.getElementById("v8").value);
-        v9 = parseInt(document.getElementById("v9").value);
 
-}
 function four() {
 
         var result = 34;
