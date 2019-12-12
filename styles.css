@@ -163,6 +163,7 @@ body{
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 5px;
+    min-width: 100px;
 }
 
 .innerpageheading{
@@ -205,8 +206,9 @@ body{
 .magic3{
     display: grid;
     grid-template-rows: 50px 50px 50px;
-    grid-template-columns: 50px 50px 50px;
+    grid-template-columns: 250px 50px 50px 50px 50px;
     margin:10px auto;
+    margin-right: 100px;
     padding: 10px;
     justify-content: center;
     
@@ -220,11 +222,24 @@ body{
     text-align: center;
 }
 
+.magicrules3{
+    grid-row-start: span 3;
+    grid-column-start: span 2;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.magicrules4{
+    grid-row-start: span 4;
+    text-align: left;
+    padding-right: 10px;
+}
 .magic4{
     display: grid;
     grid-template-rows: 50px 50px 50px 50px;
-    grid-template-columns: 50px 50px 50px 50px;
-    margin: 10px;
+    grid-template-columns: 250px 50px 50px 50px 50px;
+    margin: 10px auto;
+    margin-right: 100px;
     padding: 10px;
     justify-content: center;
 }
@@ -237,12 +252,4 @@ body{
 
 .magicbutton{
     width: 125px;
-}
-
-.helpbutton{
-    float: left;
-}
-
-.clearer{
-    clear: both;
 }
