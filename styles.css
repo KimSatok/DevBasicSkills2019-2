@@ -189,6 +189,7 @@ body{
 }
 .rvanswerbox{
     margin: 15px;
+    min-height: 20px;
     height: auto;
     width: auto;
     border: 1px black solid;
@@ -197,4 +198,51 @@ body{
 
 .rvbutton{
     margin-top: 15px;
+}
+
+/* magic squares*/
+
+.magic3{
+    display: grid;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px;
+    margin:10px auto;
+    padding: 10px;
+    justify-content: center;
+    
+}
+
+.magiccell{
+    width: 50px;
+    border: 1px black solid;
+    line-height: 50px;
+    font-size:24px;
+    text-align: center;
+}
+
+.magic4{
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px 50px;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.magicheading{
+    margin:10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.magicbutton{
+    width: 125px;
+}
+
+.helpbutton{
+    float: left;
+}
+
+.clearer{
+    clear: both;
 }
