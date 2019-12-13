@@ -24,20 +24,20 @@ function three() {
                 if (v1 != v2 && v1 != v3 && v1 != v4 && v1 != v5 && v1 != v6 && v1 != v7 && v1 != v8 && v1 != v9 && v2 != v3 && v2 != v4 && v2 != v5 && v2 != v6 && v2 != v7 && v2 != v8 &&
                         v2 != v9 && v3 != v4 && v3 != v5 && v3 != v6 && v3 != v7 && v3 != v8 && v3 != v9 && v4 != v5 && v4 != v6 && v4 != v7 && v4 != v8 && v4 != v9 && v5 != v6 && v5 != v7 && v5 != v8 && v5 != v9 && v6 != v7 && v6 != v8 && v6 != v9 && v7 != v8 && v7 != v9 && v8 != v9) {
                         if (v1 + v2 + v3 == result && v4 + v5 + v6 == result && v7 + v8 + v9 && v1 + v4 + v7 == result && v2 + v5 + v8 == result && v3 + v6 + v9 == result && v1 + v5 + v9 == result && v3 + v5 + v7 == result) {
-                                document.getElementById("result").innerHTML = "Congratulation! You did it";
+                                document.getElementById("result").innerHTML = "Congratulations! You did it!";
                         }
                         else {
-                                document.getElementById("result").innerHTML = "\n Sorry something wrong please check it again \n \n ";
+                                document.getElementById("result").innerHTML = "\n Sorry, something went wrong. Please check it again. \n \n ";
                         }
                 }
                 else {
-                        document.getElementById("result").innerHTML = "\n Sorry you can't use the same number twice \n ";
+                        document.getElementById("result").innerHTML = "\n Sorry, you can't use the same number twice. \n ";
                 }
 
 
         }
         else {
-                document.getElementById("result").innerHTML = "\n All blank space must be filled \n";
+                document.getElementById("result").innerHTML = "\n All blank spaces must be filled. \n";
         }
 }
 
@@ -105,20 +105,20 @@ function four() {
                                 v4 + v8 + v12 + v16 == result && 
                                 v1 + v6 + v11 + v16 == result && 
                                 v4 + v7 + v10 + v13 == result) {
-                                document.getElementById("result2").innerHTML = "Congratulation! You did it";
+                                document.getElementById("result2").innerHTML = "Congratulations! You did it!";
                         }
                         else {
-                                document.getElementById("result2").innerHTML = "\n Sorry something wrong please check it again \n \n ";
+                                document.getElementById("result2").innerHTML = "\n Sorry, something went wrong. Please check it again. \n \n ";
                         }
                 }
                 else {
-                        document.getElementById("result2").innerHTML = "\n Sorry you can't use the same number twice \n ";
+                        document.getElementById("result2").innerHTML = "\n Sorry, you can't use the same number twice. \n ";
                 }
 
 
         }
         else {
-                document.getElementById("result2").innerHTML = "\n All blank space must be filled \n";
+                document.getElementById("result2").innerHTML = "\n All blank spaces must be filled. \n";
         }
 }
 function reset3x3() {

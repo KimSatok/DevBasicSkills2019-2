@@ -20,10 +20,10 @@ function generator() {
 
     for (var key in result) {
         if (result[key] == 1) {
-            output = output + 'number ' + key + ' appeared only once' + ("<br>");
+            output = output + 'Number ' + key + ' appeared only once.' + ("<br>");
         }
         else {
-            output = output + 'number ' + key + ' appeared ' + result[key] + " times" + ("<br>");
+            output = output + 'Number ' + key + ' appeared ' + result[key] + " times." + ("<br>");
 
         }
 
