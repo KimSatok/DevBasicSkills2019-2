@@ -40,7 +40,7 @@ function OR() {
     let result = document.getElementById("truthtablebox")
 
     let table = ""
-    table = "1 &ensp; &#8744; &ensp; 1 &ensp; = &ensp; " + (true | true) + ("<br>") + "1 &ensp; &#8744; &ensp; 0 &ensp;  = &ensp; " + (true + false) + ("<br>") + "0 &ensp; &#8744; &ensp; 1 &ensp;  = &ensp; " + (false + true) + ("<br>") + "0 &ensp; &#8744; &ensp; 0 &ensp; = &ensp; " + (false + false)
+    table = "1 &ensp; &#8744; &ensp; 1 &ensp; = &ensp; " + (true | true) + ("<br>") + "1 &ensp; &#8744; &ensp; 0 &ensp;  = &ensp; " + (true | false) + ("<br>") + "0 &ensp; &#8744; &ensp; 1 &ensp;  = &ensp; " + (false | true) + ("<br>") + "0 &ensp; &#8744; &ensp; 0 &ensp; = &ensp; " + (false + false)
 
     result.innerHTML = table
 }
@@ -62,7 +62,7 @@ function XNOR () {
     let result = document.getElementById("truthtablebox")
 
     let table = ""
-    table = " &#172;(1 &ensp; &oplus; &ensp; 1) &ensp; = &ensp; " + "1" + ("<br>") + "&#172;(1 &ensp; &oplus; &ensp; 0) &ensp;  = &ensp; " + (true * false) + ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 1) &ensp;  = &ensp; " + (false * true) + ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 0) &ensp; = &ensp; " + ("1")
+    table = " &#172;(1 &ensp; &oplus; &ensp; 1) &ensp; = &ensp; " + ~~(!(true ^ true)) + ("<br>") + "&#172;(1 &ensp; &oplus; &ensp; 0) &ensp;  = &ensp; " + ~~(!(true ^ false)) + ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 1) &ensp;  = &ensp; " + ~~(!(false ^ true))+ ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 0) &ensp; = &ensp; " + ~~(!(false^false))
     result.innerHTML = table
 }
 
@@ -70,7 +70,7 @@ function NOR () {
     let result = document.getElementById("truthtablebox")
 
     let table = ""
-    table = " &#172;(1 &ensp; &oplus; &ensp; 1) &ensp; = &ensp; " + "0" + ("<br>") + "&#172;(1 &ensp; &oplus; &ensp; 0) &ensp;  = &ensp; " + "0" + ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 1) &ensp;  = &ensp; " + "0" + ("<br>") + "&#172;(0 &ensp; &oplus; &ensp; 0) &ensp; = &ensp; " + ("1")
+    table = " &#172;(1 &ensp; &#8744; &ensp; 1) &ensp; = &ensp; " + ~~(!(true | true)) + ("<br>") + "&#172;(1 &ensp; &#8744; &ensp; 0) &ensp;  = &ensp; " + ~~(!(true | false)) + ("<br>") + "&#172;(0 &ensp; &#8744; &ensp; 1) &ensp;  = &ensp; " + ~~(!(false | true)) + ("<br>") + "&#172;(0 &ensp; &#8744; &ensp; 0) &ensp; = &ensp; " + ~~(!(false | false))
     result.innerHTML = table
 }
 
@@ -78,7 +78,7 @@ function NAND () {
     let result = document.getElementById("truthtablebox")
 
     let table = ""
-    table = " &#172;(1 &ensp; &#8744; &ensp; 1) &ensp; = &ensp; " + "0" + ("<br>") + "&#172;(1 &ensp; &#8744; &ensp; 0) &ensp;  = &ensp; " + (true + false) + ("<br>") + "&#172;(0 &ensp; &#8744; &ensp; 1) &ensp;  = &ensp; " + (false + true) + ("<br>") + "&#172;(0 &ensp; &#8744; &ensp; 0) &ensp; = &ensp; " + ("1")
+    table = " &#172;(1 &ensp; &#8743; &ensp; 1) &ensp; = &ensp; " + ~~(!(true & true)) + ("<br>") + "&#172;(1 &ensp; &#8743; &ensp; 0) &ensp;  = &ensp; " + ~~(!(true & false)) + ("<br>") + "&#172;(0 &ensp; &#8743; &ensp; 1) &ensp;  = &ensp; " + ~~(!(false & true)) + ("<br>") + "&#172;(0 &ensp; &#8743; &ensp; 0) &ensp; = &ensp; " + ~~(!(false & false))
 
     result.innerHTML = table
 }
